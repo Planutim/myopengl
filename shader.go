@@ -66,7 +66,7 @@ func (s *Shader) SetInt(name string, value int32) {
 	gl.Uniform1i(gl.GetUniformLocation(s.ID, gl.Str(name+"\x00")), value)
 }
 func (s *Shader) SetFloat(name string, value float32) {
-	gl.Uniform1f(gl.GetUniformLocation(s.ID, gl.Str("name"+"\x00")), value)
+	gl.Uniform1f(gl.GetUniformLocation(s.ID, gl.Str(name+"\x00")), value)
 }
 func (s *Shader) SetVec2(name string, value *mgl32.Vec2) {
 	gl.Uniform2fv(gl.GetUniformLocation(s.ID, gl.Str(name+"\x00")), 1, &value[0])
