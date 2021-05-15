@@ -12,6 +12,9 @@ func InitGlfw(width, height int) *glfw.Window {
 	if err != nil {
 		log.Fatal("Error initializing glfw!")
 	}
+	glfw.WindowHint(glfw.ContextVersionMajor, 4)
+	glfw.WindowHint(glfw.ContextVersionMinor, 1)
+	glfw.WindowHint(glfw.OpenGLProfile, glfw.OpenGLCoreProfile)
 
 	window, err := glfw.CreateWindow(width, height, "something", nil, nil)
 	if err != nil {
